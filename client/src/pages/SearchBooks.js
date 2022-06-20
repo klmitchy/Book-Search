@@ -7,6 +7,8 @@ import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';
 
+const [saveBook, { error }] = useMutation(SAVE_BOOK);
+
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -145,3 +147,4 @@ const SearchBooks = () => {
 };
 
 export default SearchBooks;
+
